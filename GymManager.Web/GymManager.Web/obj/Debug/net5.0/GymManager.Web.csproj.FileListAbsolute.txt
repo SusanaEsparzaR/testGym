@@ -364,3 +364,5 @@ C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\obj\Debug\net5.0\Razo
 C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\obj\Debug\net5.0\Razor\Views\Members\Edit.cshtml.g.cs
 C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\obj\Debug\net5.0\Razor\Views\MembershipTypes\Index.cshtml.g.cs
 C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\obj\Debug\net5.0\Razor\Views\Shared\_MembershipTypeList.cshtml.g.cs
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\obj\Debug\net5.0\Razor\Views\MembershipTypes\Create.cshtml.g.cs
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\obj\Debug\net5.0\Razor\Views\MembershipTypes\Edit.cshtml.g.cs

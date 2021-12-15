@@ -1,6 +1,7 @@
 ﻿using GymManager.Core.MembershipTypes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GymManager.ApplicationServices.MembershipTypes
 {
@@ -8,45 +9,37 @@ namespace GymManager.ApplicationServices.MembershipTypes
     {
         private static List<MembershipType> MembershipTypes = new List<MembershipType>();
 
+        public int AddMembershipType(MembershipType membershipType)
+        {
+            membershipType.Id = new Random().Next();
+            MembershipTypes.Add(membershipType);
+            return membershipType.Id;
+        }
+
+        public void DeleteMembershipType(int membershipTypeId)
+        {
+            var m = MembershipTypes.Where(x => x.Id == membershipTypeId).FirstOrDefault();
+            MembershipTypes.Remove(m);
+        }
+
+        public void EditMembershipType(MembershipType membershipType)
+        {
+            var m = MembershipTypes.Where(x => x.Id == membershipType.Id).FirstOrDefault();
+            m.Name = membershipType.Name;
+            m.Cost = membershipType.Cost;
+            m.CreatedOn = membershipType.CreatedOn;
+            m.Duration = membershipType.Duration;
+        }
+
+        public MembershipType GetMembershipType(int membershipTypeId)
+        {
+            var m = MembershipTypes.Where(x => x.Id == membershipTypeId).FirstOrDefault();
+            return m;
+        }
+
         public List<MembershipType> GetMembershipTypes()
         {
-            List<MembershipType> list = new List<MembershipType>();
-            list.Add(new MembershipType
-            {
-                Name = "Elite",
-                Cost = 500,
-                CreatedOn = DateTime.Now,
-                Duration = 12
-            });
-            list.Add(new MembershipType
-            {
-                Name = "Yearly",
-                Cost = 400,
-                CreatedOn = DateTime.Now,
-                Duration = 12
-            });
-            list.Add(new MembershipType
-            {
-                Name = "Six",
-                Cost = 270,
-                CreatedOn = DateTime.Now,
-                Duration = 6
-            });
-            list.Add(new MembershipType
-            {
-                Name = "Three",
-                Cost = 160,
-                CreatedOn = DateTime.Now,
-                Duration = 3
-            });
-            list.Add(new MembershipType
-            {
-                Name = "Monthly",
-                Cost = 60,
-                CreatedOn = DateTime.Now,
-                Duration = 1
-            });
-            return list;
+            return MembershipTypes;
         }
     }
 }
