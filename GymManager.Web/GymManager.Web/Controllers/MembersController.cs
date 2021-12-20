@@ -1,11 +1,14 @@
 ﻿using GymManager.ApplicationServices.Members;
 using GymManager.Core.Members;
 using GymManager.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Serilog;
 
 namespace GymManager.Web.Controllers
 {
+    [Authorize]
     public class MembersController : Controller
     {
         private readonly IMembersAppService _membersAppService;
@@ -17,6 +20,9 @@ namespace GymManager.Web.Controllers
 
         public IActionResult Index()
         {
+
+            Log.Information("The index action of the members controller");
+
             List<Member> members = _membersAppService.GetMembers();
 
             MemberListViewModel viewModel = new MemberListViewModel();

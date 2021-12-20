@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿@using GymManager.Web.Views.Shared.Components.AppMenu
+<!doctype html>
 <html lang="en" class="h-100">
 <head>
     <meta charset="utf-8">
@@ -14,6 +15,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="~/Bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Bootstrap/css/style.css">
+
 
     <!-- Favicons -->
 
@@ -53,17 +55,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link active font-exo" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link font-exo" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link font-exo disabled">Disabled</a>
-                        </li>
-                    </ul>
+
+                    @await Component.InvokeAsync(typeof(AppMenuViewComponent), new {currentPageName = ViewBag.CurrentPageName })
+
                     @await Html.PartialAsync("~/Views/Shared/_User.cshtml")
 
                     @RenderSection("HeaderRight", false)
@@ -83,7 +77,9 @@
         </div>
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="~/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
     @RenderSection("Scripts", false)
