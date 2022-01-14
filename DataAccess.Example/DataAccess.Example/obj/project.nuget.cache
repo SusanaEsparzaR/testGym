@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MCCoDRxSgkpDEZXh4wxN9j37QF6far3MUS09AhP3ZxvKHVrGJ6F1+hVwtJGFYV/KIORNw9U2iGIvSnn1XaMslw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Susana\\source\\repos\\Api\\DataAccess.Example\\DataAccess.Example\\DataAccess.Example.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Susana\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
