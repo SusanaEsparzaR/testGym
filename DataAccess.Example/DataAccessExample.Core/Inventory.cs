@@ -18,7 +18,5 @@ namespace DataAccessExample.Core
 
         [Required]
         public Decimal Price { get; set; }
-
-        public List<Inventory> Inventories { get; set; }
     }
 }

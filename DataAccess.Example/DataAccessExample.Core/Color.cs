@@ -17,5 +17,7 @@ namespace DataAccessExample.Core
 
         [Required, StringLength(5)]
         public string Code { get; set; }
+
+        public List<Inventory> Inventories { get; set; }
     }
 }
