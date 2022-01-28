@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SPs.DataAccess/1.0.0": {
+        "dependencies": {
+          "MySqlConnector": "2.1.4"
+        },
+        "runtime": {
+          "SPs.DataAccess.dll": {}
+        }
+      },
+      "MySqlConnector/2.1.4": {
+        "runtime": {
+          "lib/net5.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.4.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SPs.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MySqlConnector/2.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2G9vDmAqfVaib+qjcPEkLyBpyTEgveJDJA6c3G4F+wQMpq23oXCKuU9BZ9I7meePHxw0zvVh9t9sDxhu84/OuA==",
+      "path": "mysqlconnector/2.1.4",
+      "hashPath": "mysqlconnector.2.1.4.nupkg.sha512"
+    }
+  }
+}
