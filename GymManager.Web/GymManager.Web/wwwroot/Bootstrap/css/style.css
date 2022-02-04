@@ -1,0 +1,25 @@
+.bg-dark {
+    background-color: #0C0480 !important;
+}
+
+.font-exo {
+    font-family: 'Exo', sans-serif;
+}
+
+.txt-bold {
+    font-weight: bolder;
+}
+
+.btn-color-white {
+    color: #fff;
+    border-color: #fff;
+    border-width: 2px !important;
+}
+
+.img-header {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    color: #fff;
+}
+

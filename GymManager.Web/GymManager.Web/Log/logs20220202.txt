@@ -1,0 +1,682 @@
+2022-02-02 16:14:28.199 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 16:14:30.696 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 16:14:30.730 -06:00 [INF] Hosting environment: Development
+2022-02-02 16:14:30.779 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 16:14:30.966 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 16:14:34.645 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:14:35.745 -06:00 [INF] Executed DbCommand (196ms) [Parameters=[@__p_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`ConcurrencyStamp`, `a`.`Email`, `a`.`EmailConfirmed`, `a`.`LockoutEnabled`, `a`.`LockoutEnd`, `a`.`NormalizedEmail`, `a`.`NormalizedUserName`, `a`.`PasswordHash`, `a`.`PhoneNumber`, `a`.`PhoneNumberConfirmed`, `a`.`SecurityStamp`, `a`.`TwoFactorEnabled`, `a`.`UserName`
+FROM `AspNetUsers` AS `a`
+WHERE `a`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 16:14:36.349 -06:00 [INF] Executed DbCommand (12ms) [Parameters=[@__user_Id_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ClaimType`, `a`.`ClaimValue`, `a`.`UserId`
+FROM `AspNetUserClaims` AS `a`
+WHERE `a`.`UserId` = @__user_Id_0
+2022-02-02 16:14:36.377 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 16:14:36.459 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 16:14:36.674 -06:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:14:36.977 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:14:37.596 -06:00 [INF] Executed ViewResult - view Index executed in 707.2983ms.
+2022-02-02 16:14:37.604 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 1139.0421ms
+2022-02-02 16:14:37.611 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 16:14:37.654 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 6705.7503ms
+2022-02-02 16:14:37.831 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Bootstrap/css/bootstrap.min.css - -
+2022-02-02 16:14:37.840 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Bootstrap/css/style.css - -
+2022-02-02 16:14:37.959 -06:00 [INF] Sending file. Request path: '/Bootstrap/css/style.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Bootstrap\css\style.css'
+2022-02-02 16:14:37.978 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Bootstrap/css/style.css - - - 200 362 text/css 137.5244ms
+2022-02-02 16:14:38.012 -06:00 [INF] Sending file. Request path: '/Bootstrap/css/bootstrap.min.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Bootstrap\css\bootstrap.min.css'
+2022-02-02 16:14:38.025 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Bootstrap/css/bootstrap.min.css - - - 200 163873 text/css 194.4029ms
+2022-02-02 16:14:38.503 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Bootstrap/js/bootstrap.bundle.min.js - -
+2022-02-02 16:14:38.532 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Images/gym.png - -
+2022-02-02 16:14:38.549 -06:00 [INF] Sending file. Request path: '/Bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Bootstrap\js\bootstrap.bundle.min.js'
+2022-02-02 16:14:38.559 -06:00 [INF] Sending file. Request path: '/Images/gym.png'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Images\gym.png'
+2022-02-02 16:14:38.577 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Images/gym.png - - - 200 44954 image/png 45.2695ms
+2022-02-02 16:14:38.582 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Bootstrap/js/bootstrap.bundle.min.js - - - 200 78129 application/javascript 73.1136ms
+2022-02-02 16:14:38.898 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 16:14:38.915 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 17.8354ms
+2022-02-02 16:14:51.939 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/MemberRenewal/ - -
+2022-02-02 16:14:51.974 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web)'
+2022-02-02 16:14:51.990 -06:00 [INF] Route matched with {action = "Index", controller = "MemberRenewal", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.MemberRenewalController (GymManager.Web).
+2022-02-02 16:14:52.050 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:14:52.076 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:14:52.097 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:14:52.193 -06:00 [INF] Executed ViewResult - view Index executed in 110.9283ms.
+2022-02-02 16:14:52.197 -06:00 [INF] Executed action GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web) in 202.5824ms
+2022-02-02 16:14:52.209 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web)'
+2022-02-02 16:14:52.223 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/MemberRenewal/ - - - 200 - text/html;+charset=utf-8 283.5291ms
+2022-02-02 16:14:56.187 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/MemberRenewal/Edit?memberId=7 - -
+2022-02-02 16:14:56.202 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MemberRenewalController.Edit (GymManager.Web)'
+2022-02-02 16:14:56.234 -06:00 [INF] Route matched with {action = "Edit", controller = "MemberRenewal", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32) on controller GymManager.Web.Controllers.MemberRenewalController (GymManager.Web).
+2022-02-02 16:14:56.286 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:14:56.333 -06:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+WHERE `m`.`Id` = @__id_0
+LIMIT 1
+2022-02-02 16:14:56.357 -06:00 [INF] Executing ViewResult, running view Edit.
+2022-02-02 16:14:56.571 -06:00 [INF] Executed ViewResult - view Edit executed in 232.5602ms.
+2022-02-02 16:14:56.579 -06:00 [INF] Executed action GymManager.Web.Controllers.MemberRenewalController.Edit (GymManager.Web) in 340.1168ms
+2022-02-02 16:14:56.586 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MemberRenewalController.Edit (GymManager.Web)'
+2022-02-02 16:14:56.592 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/MemberRenewal/Edit?memberId=7 - - - 200 - text/html;+charset=utf-8 404.7834ms
+2022-02-02 16:14:56.652 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.min.css - -
+2022-02-02 16:14:56.662 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.structure.min.css - -
+2022-02-02 16:14:56.660 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.min.js - -
+2022-02-02 16:14:56.660 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Views/Members/Create.js - -
+2022-02-02 16:14:56.660 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.theme.min.css - -
+2022-02-02 16:14:56.765 -06:00 [INF] Sending file. Request path: '/Views/Members/Create.js'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Views\Members\Create.js'
+2022-02-02 16:14:56.765 -06:00 [INF] Sending file. Request path: '/lib/jqueryui/jquery-ui.structure.min.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\lib\jqueryui\jquery-ui.structure.min.css'
+2022-02-02 16:14:56.806 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Views/Members/Create.js - - - 200 115 application/javascript 144.1512ms
+2022-02-02 16:14:56.806 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.structure.min.css - - - 200 15548 text/css 142.3101ms
+2022-02-02 16:14:56.806 -06:00 [INF] Sending file. Request path: '/lib/jqueryui/jquery-ui.theme.min.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\lib\jqueryui\jquery-ui.theme.min.css'
+2022-02-02 16:14:56.837 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.theme.min.css - - - 200 13847 text/css 176.7831ms
+2022-02-02 16:14:56.846 -06:00 [INF] Sending file. Request path: '/lib/jqueryui/jquery-ui.min.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\lib\jqueryui\jquery-ui.min.css'
+2022-02-02 16:14:56.897 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.min.css - - - 200 30747 text/css 244.9472ms
+2022-02-02 16:14:56.925 -06:00 [INF] Sending file. Request path: '/lib/jqueryui/jquery-ui.min.js'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\lib\jqueryui\jquery-ui.min.js'
+2022-02-02 16:14:57.048 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/lib/jqueryui/jquery-ui.min.js - - - 200 251699 application/javascript 388.3138ms
+2022-02-02 16:15:00.352 -06:00 [INF] Request starting HTTP/2 POST https://localhost:44387/MemberRenewal/Edit application/x-www-form-urlencoded 393
+2022-02-02 16:15:00.363 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MemberRenewalController.Edit (GymManager.Web)'
+2022-02-02 16:15:00.381 -06:00 [INF] Route matched with {action = "Edit", controller = "MemberRenewal", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(GymManager.Web.Models.MemberViewModel) on controller GymManager.Web.Controllers.MemberRenewalController (GymManager.Web).
+2022-02-02 16:15:00.448 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:00.471 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`
+FROM `Members` AS `m`
+WHERE `m`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 16:15:00.506 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Country`, `c`.`Name`
+FROM `Cities` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 16:15:00.823 -06:00 [INF] Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Members` SET `MembershipTypeId` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2022-02-02 16:15:00.845 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Double), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `MembershipType` SET `Cost` = @p0, `CreatedOn` = @p1, `Duration` = @p2, `Name` = @p3
+WHERE `Id` = @p4;
+SELECT ROW_COUNT();
+2022-02-02 16:15:00.882 -06:00 [INF] Executing RedirectResult, redirecting to /MemberRenewal.
+2022-02-02 16:15:00.886 -06:00 [INF] Executed action GymManager.Web.Controllers.MemberRenewalController.Edit (GymManager.Web) in 500.1886ms
+2022-02-02 16:15:00.889 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MemberRenewalController.Edit (GymManager.Web)'
+2022-02-02 16:15:00.896 -06:00 [INF] Request finished HTTP/2 POST https://localhost:44387/MemberRenewal/Edit application/x-www-form-urlencoded 393 - 302 - - 543.6430ms
+2022-02-02 16:15:00.902 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/MemberRenewal - -
+2022-02-02 16:15:00.909 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web)'
+2022-02-02 16:15:00.914 -06:00 [INF] Route matched with {action = "Index", controller = "MemberRenewal", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.MemberRenewalController (GymManager.Web).
+2022-02-02 16:15:00.919 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:00.960 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:15:00.965 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:15:00.970 -06:00 [INF] Executed ViewResult - view Index executed in 4.7296ms.
+2022-02-02 16:15:00.982 -06:00 [INF] Executed action GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web) in 63.4416ms
+2022-02-02 16:15:00.987 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web)'
+2022-02-02 16:15:00.991 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/MemberRenewal - - - 200 - text/html;+charset=utf-8 88.7873ms
+2022-02-02 16:15:08.569 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Members/ - -
+2022-02-02 16:15:08.595 -06:00 [INF] Authorization was successful.
+2022-02-02 16:15:08.599 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MembersController.Index (GymManager.Web)'
+2022-02-02 16:15:08.606 -06:00 [INF] Route matched with {action = "Index", controller = "Members", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.MembersController (GymManager.Web).
+2022-02-02 16:15:08.621 -06:00 [INF] The index action of the members controller
+2022-02-02 16:15:08.627 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:08.652 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:15:08.671 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:15:08.705 -06:00 [INF] Executed ViewResult - view Index executed in 48.4933ms.
+2022-02-02 16:15:08.712 -06:00 [INF] Executed action GymManager.Web.Controllers.MembersController.Index (GymManager.Web) in 93.9581ms
+2022-02-02 16:15:08.717 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MembersController.Index (GymManager.Web)'
+2022-02-02 16:15:08.731 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Members/ - - - 200 - text/html;+charset=utf-8 161.7588ms
+2022-02-02 16:15:13.767 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Members/Edit?memberId=7 - -
+2022-02-02 16:15:13.775 -06:00 [INF] Authorization was successful.
+2022-02-02 16:15:13.782 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MembersController.Edit (GymManager.Web)'
+2022-02-02 16:15:13.789 -06:00 [INF] Route matched with {action = "Edit", controller = "Members", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32) on controller GymManager.Web.Controllers.MembersController (GymManager.Web).
+2022-02-02 16:15:13.800 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:13.851 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+WHERE `m`.`Id` = @__id_0
+LIMIT 1
+2022-02-02 16:15:13.909 -06:00 [INF] Executing ViewResult, running view Edit.
+2022-02-02 16:15:14.051 -06:00 [INF] Executed ViewResult - view Edit executed in 195.8283ms.
+2022-02-02 16:15:14.055 -06:00 [INF] Executed action GymManager.Web.Controllers.MembersController.Edit (GymManager.Web) in 257.5888ms
+2022-02-02 16:15:14.062 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MembersController.Edit (GymManager.Web)'
+2022-02-02 16:15:14.172 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Members/Edit?memberId=7 - - - 200 - text/html;+charset=utf-8 404.6032ms
+2022-02-02 16:15:16.202 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/lib/jqueryui/images/ui-icons_444444_256x240.png - -
+2022-02-02 16:15:16.212 -06:00 [INF] Sending file. Request path: '/lib/jqueryui/images/ui-icons_444444_256x240.png'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\lib\jqueryui\images\ui-icons_444444_256x240.png'
+2022-02-02 16:15:16.223 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/lib/jqueryui/images/ui-icons_444444_256x240.png - - - 200 7090 image/png 20.7962ms
+2022-02-02 16:15:21.712 -06:00 [INF] Request starting HTTP/2 POST https://localhost:44387/Members/Edit application/x-www-form-urlencoded 379
+2022-02-02 16:15:21.725 -06:00 [INF] Authorization was successful.
+2022-02-02 16:15:21.734 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MembersController.Edit (GymManager.Web)'
+2022-02-02 16:15:21.742 -06:00 [INF] Route matched with {action = "Edit", controller = "Members", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(GymManager.Web.Models.MemberViewModel) on controller GymManager.Web.Controllers.MembersController (GymManager.Web).
+2022-02-02 16:15:21.748 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:21.764 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`
+FROM `Members` AS `m`
+WHERE `m`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 16:15:21.776 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Country`, `c`.`Name`
+FROM `Cities` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 16:15:21.798 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Members` SET `BirthDay` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2022-02-02 16:15:21.815 -06:00 [INF] Executing RedirectResult, redirecting to /Members.
+2022-02-02 16:15:21.818 -06:00 [INF] Executed action GymManager.Web.Controllers.MembersController.Edit (GymManager.Web) in 73.2649ms
+2022-02-02 16:15:21.821 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MembersController.Edit (GymManager.Web)'
+2022-02-02 16:15:21.827 -06:00 [INF] Request finished HTTP/2 POST https://localhost:44387/Members/Edit application/x-www-form-urlencoded 379 - 302 - - 115.1474ms
+2022-02-02 16:15:21.832 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Members - -
+2022-02-02 16:15:21.841 -06:00 [INF] Authorization was successful.
+2022-02-02 16:15:21.845 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MembersController.Index (GymManager.Web)'
+2022-02-02 16:15:21.848 -06:00 [INF] Route matched with {action = "Index", controller = "Members", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.MembersController (GymManager.Web).
+2022-02-02 16:15:21.852 -06:00 [INF] The index action of the members controller
+2022-02-02 16:15:21.857 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:21.870 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:15:21.876 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:15:21.881 -06:00 [INF] Executed ViewResult - view Index executed in 5.3566ms.
+2022-02-02 16:15:21.891 -06:00 [INF] Executed action GymManager.Web.Controllers.MembersController.Index (GymManager.Web) in 38.8457ms
+2022-02-02 16:15:21.904 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MembersController.Index (GymManager.Web)'
+2022-02-02 16:15:21.916 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Members - - - 200 - text/html;+charset=utf-8 83.6382ms
+2022-02-02 16:15:25.220 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Members/Delete?memberId=7 - -
+2022-02-02 16:15:25.237 -06:00 [INF] Authorization was successful.
+2022-02-02 16:15:25.270 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MembersController.Delete (GymManager.Web)'
+2022-02-02 16:15:25.284 -06:00 [INF] Route matched with {action = "Delete", controller = "Members", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller GymManager.Web.Controllers.MembersController (GymManager.Web).
+2022-02-02 16:15:25.309 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:25.332 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`
+FROM `Members` AS `m`
+WHERE `m`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 16:15:25.363 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `Members`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2022-02-02 16:15:25.379 -06:00 [INF] Executing RedirectResult, redirecting to /Members.
+2022-02-02 16:15:25.381 -06:00 [INF] Executed action GymManager.Web.Controllers.MembersController.Delete (GymManager.Web) in 80.9318ms
+2022-02-02 16:15:25.384 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MembersController.Delete (GymManager.Web)'
+2022-02-02 16:15:25.390 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Members/Delete?memberId=7 - - - 302 - - 170.0459ms
+2022-02-02 16:15:25.397 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Members - -
+2022-02-02 16:15:25.403 -06:00 [INF] Authorization was successful.
+2022-02-02 16:15:25.407 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MembersController.Index (GymManager.Web)'
+2022-02-02 16:15:25.410 -06:00 [INF] Route matched with {action = "Index", controller = "Members", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.MembersController (GymManager.Web).
+2022-02-02 16:15:25.413 -06:00 [INF] The index action of the members controller
+2022-02-02 16:15:25.417 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:25.436 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:15:25.448 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:15:25.460 -06:00 [INF] Executed ViewResult - view Index executed in 11.5388ms.
+2022-02-02 16:15:25.466 -06:00 [INF] Executed action GymManager.Web.Controllers.MembersController.Index (GymManager.Web) in 52.7656ms
+2022-02-02 16:15:25.522 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MembersController.Index (GymManager.Web)'
+2022-02-02 16:15:25.537 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Members - - - 200 - text/html;+charset=utf-8 139.9825ms
+2022-02-02 16:15:32.330 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/MemberRenewal/ - -
+2022-02-02 16:15:32.341 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web)'
+2022-02-02 16:15:32.349 -06:00 [INF] Route matched with {action = "Index", controller = "MemberRenewal", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.MemberRenewalController (GymManager.Web).
+2022-02-02 16:15:32.353 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 16:15:32.400 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 16:15:32.413 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 16:15:32.421 -06:00 [INF] Executed ViewResult - view Index executed in 7.5058ms.
+2022-02-02 16:15:32.426 -06:00 [INF] Executed action GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web) in 73.8208ms
+2022-02-02 16:15:32.432 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.MemberRenewalController.Index (GymManager.Web)'
+2022-02-02 16:15:32.477 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/MemberRenewal/ - - - 200 - text/html;+charset=utf-8 147.3862ms
+2022-02-02 19:41:13.973 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 19:41:18.180 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 19:41:18.191 -06:00 [INF] Hosting environment: Development
+2022-02-02 19:41:18.211 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 19:41:18.321 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 19:41:20.992 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 19:41:22.376 -06:00 [INF] Executed DbCommand (147ms) [Parameters=[@__p_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`ConcurrencyStamp`, `a`.`Email`, `a`.`EmailConfirmed`, `a`.`LockoutEnabled`, `a`.`LockoutEnd`, `a`.`NormalizedEmail`, `a`.`NormalizedUserName`, `a`.`PasswordHash`, `a`.`PhoneNumber`, `a`.`PhoneNumberConfirmed`, `a`.`SecurityStamp`, `a`.`TwoFactorEnabled`, `a`.`UserName`
+FROM `AspNetUsers` AS `a`
+WHERE `a`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 19:41:22.841 -06:00 [INF] Executed DbCommand (17ms) [Parameters=[@__user_Id_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ClaimType`, `a`.`ClaimValue`, `a`.`UserId`
+FROM `AspNetUserClaims` AS `a`
+WHERE `a`.`UserId` = @__user_Id_0
+2022-02-02 19:41:22.863 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 19:41:22.924 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 19:41:23.089 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 19:41:23.310 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 19:41:23.768 -06:00 [INF] Executed ViewResult - view Index executed in 497.5567ms.
+2022-02-02 19:41:23.779 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 851.8138ms
+2022-02-02 19:41:23.789 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 19:41:23.842 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 5526.6435ms
+2022-02-02 19:41:24.562 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 19:41:24.609 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 47.7453ms
+2022-02-02 19:41:46.106 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 19:41:46.132 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 404 - - 26.0044ms
+2022-02-02 19:43:38.035 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 19:43:38.831 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 19:43:38.840 -06:00 [INF] Hosting environment: Development
+2022-02-02 19:43:38.848 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 19:43:38.932 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 19:43:39.860 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 19:43:39.974 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 19:43:42.220 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 19:43:43.585 -06:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 19:43:43.988 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 19:43:44.526 -06:00 [INF] Executed ViewResult - view Index executed in 575.1464ms.
+2022-02-02 19:43:44.538 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 4559.9587ms
+2022-02-02 19:43:44.544 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 19:43:44.656 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 5730.6651ms
+2022-02-02 19:43:45.193 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 19:43:45.226 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 34.4275ms
+2022-02-02 19:43:48.305 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 19:43:48.354 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 19:43:48.378 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 19:43:53.605 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 19:43:53.657 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 5267.731ms
+2022-02-02 19:43:53.671 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 19:43:53.690 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 151750 application/pdf 5385.4428ms
+2022-02-02 21:35:07.771 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 21:35:09.415 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 21:35:09.426 -06:00 [INF] Hosting environment: Development
+2022-02-02 21:35:09.511 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 21:35:09.638 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 21:35:13.205 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 21:35:14.871 -06:00 [INF] Executed DbCommand (185ms) [Parameters=[@__p_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`ConcurrencyStamp`, `a`.`Email`, `a`.`EmailConfirmed`, `a`.`LockoutEnabled`, `a`.`LockoutEnd`, `a`.`NormalizedEmail`, `a`.`NormalizedUserName`, `a`.`PasswordHash`, `a`.`PhoneNumber`, `a`.`PhoneNumberConfirmed`, `a`.`SecurityStamp`, `a`.`TwoFactorEnabled`, `a`.`UserName`
+FROM `AspNetUsers` AS `a`
+WHERE `a`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 21:35:15.538 -06:00 [INF] Executed DbCommand (16ms) [Parameters=[@__user_Id_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ClaimType`, `a`.`ClaimValue`, `a`.`UserId`
+FROM `AspNetUserClaims` AS `a`
+WHERE `a`.`UserId` = @__user_Id_0
+2022-02-02 21:35:15.571 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:35:15.656 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 21:35:15.834 -06:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 21:35:16.230 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 21:35:16.756 -06:00 [INF] Executed ViewResult - view Index executed in 641.9403ms.
+2022-02-02 21:35:16.784 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 1114.747ms
+2022-02-02 21:35:16.788 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:35:16.866 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 7240.9805ms
+2022-02-02 21:35:17.924 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 21:35:17.949 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 24.5589ms
+2022-02-02 21:35:20.851 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 21:35:20.889 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:35:20.902 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 21:35:24.683 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 21:35:24.728 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 3821.9476ms
+2022-02-02 21:35:24.730 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:35:24.735 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237518 application/pdf 3884.4886ms
+2022-02-02 21:41:40.702 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 21:41:41.642 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 21:41:41.645 -06:00 [INF] Hosting environment: Development
+2022-02-02 21:41:41.648 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 21:41:41.723 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 21:41:43.264 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:41:43.505 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 21:41:46.378 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 21:41:47.371 -06:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 21:41:47.780 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 21:41:48.181 -06:00 [INF] Executed ViewResult - view Index executed in 436.5754ms.
+2022-02-02 21:41:48.192 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 4578.598ms
+2022-02-02 21:41:48.196 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:41:48.235 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 6520.0583ms
+2022-02-02 21:41:48.626 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 21:41:48.645 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 19.6697ms
+2022-02-02 21:42:05.650 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 21:42:05.689 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:42:05.697 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 21:42:13.670 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 21:42:13.711 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 8007.03ms
+2022-02-02 21:42:13.714 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:42:13.718 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237517 application/pdf 8068.4348ms
+2022-02-02 21:44:44.563 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 21:44:45.383 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 21:44:45.386 -06:00 [INF] Hosting environment: Development
+2022-02-02 21:44:45.391 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 21:44:45.467 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 21:44:46.232 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:44:46.319 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 21:44:47.662 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 21:44:48.426 -06:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 21:44:48.749 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 21:44:49.077 -06:00 [INF] Executed ViewResult - view Index executed in 351.0058ms.
+2022-02-02 21:44:49.084 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 2758.9944ms
+2022-02-02 21:44:49.092 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:44:49.121 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 3659.6891ms
+2022-02-02 21:44:49.480 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 21:44:49.501 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 21.0609ms
+2022-02-02 21:44:51.967 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 21:44:52.003 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:44:52.011 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 21:46:56.335 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 21:46:56.360 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 124347.0535ms
+2022-02-02 21:46:56.364 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:46:56.373 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237517 application/pdf 124406.6418ms
+2022-02-02 21:49:45.320 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 21:49:46.152 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 21:49:46.155 -06:00 [INF] Hosting environment: Development
+2022-02-02 21:49:46.158 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 21:49:46.218 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 21:49:46.950 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:49:47.016 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 21:49:48.349 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 21:49:49.100 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 21:49:49.429 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 21:49:49.746 -06:00 [INF] Executed ViewResult - view Index executed in 353.2102ms.
+2022-02-02 21:49:49.754 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 2733.6868ms
+2022-02-02 21:49:49.765 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:49:49.839 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 3624.1597ms
+2022-02-02 21:49:50.159 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 21:49:50.185 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 25.3392ms
+2022-02-02 21:49:57.383 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 21:49:57.424 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:49:57.434 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 21:50:05.783 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 21:50:05.832 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 8395.953ms
+2022-02-02 21:50:05.834 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:50:05.840 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237517 application/pdf 8456.6240ms
+2022-02-02 21:51:31.214 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 21:51:32.216 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 21:51:32.221 -06:00 [INF] Hosting environment: Development
+2022-02-02 21:51:32.229 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 21:51:32.327 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 21:51:33.086 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:51:33.166 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 21:51:34.668 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 21:51:35.640 -06:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 21:51:35.983 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 21:51:36.384 -06:00 [INF] Executed ViewResult - view Index executed in 431.1785ms.
+2022-02-02 21:51:36.394 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 3224.5263ms
+2022-02-02 21:51:36.400 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:51:36.489 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 4165.3082ms
+2022-02-02 21:51:36.834 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 21:51:36.869 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 35.2645ms
+2022-02-02 21:52:15.388 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 21:52:15.443 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:52:15.452 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 21:52:24.292 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 21:52:24.349 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 8893.2777ms
+2022-02-02 21:52:24.353 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:52:24.374 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237809 application/pdf 8985.7343ms
+2022-02-02 21:53:06.749 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 21:53:06.770 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:53:06.773 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 21:53:06.830 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 21:53:06.878 -06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 21:53:06.887 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 21:53:06.902 -06:00 [INF] Executed ViewResult - view Index executed in 15.3454ms.
+2022-02-02 21:53:06.905 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 129.3385ms
+2022-02-02 21:53:06.910 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 21:53:06.915 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 166.7937ms
+2022-02-02 21:53:06.973 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Bootstrap/css/style.css - -
+2022-02-02 21:53:06.980 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Bootstrap/css/bootstrap.min.css - -
+2022-02-02 21:53:06.981 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Bootstrap/js/bootstrap.bundle.min.js - -
+2022-02-02 21:53:07.009 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Images/gym.png - -
+2022-02-02 21:53:07.027 -06:00 [INF] Sending file. Request path: '/Bootstrap/css/style.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Bootstrap\css\style.css'
+2022-02-02 21:53:07.032 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Bootstrap/css/style.css - - - 200 362 text/css 58.1062ms
+2022-02-02 21:53:07.058 -06:00 [INF] Sending file. Request path: '/Bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Bootstrap\js\bootstrap.bundle.min.js'
+2022-02-02 21:53:07.058 -06:00 [INF] Sending file. Request path: '/Images/gym.png'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Images\gym.png'
+2022-02-02 21:53:07.058 -06:00 [INF] Sending file. Request path: '/Bootstrap/css/bootstrap.min.css'. Physical path: 'C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web\wwwroot\Bootstrap\css\bootstrap.min.css'
+2022-02-02 21:53:07.072 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Bootstrap/js/bootstrap.bundle.min.js - - - 200 78129 application/javascript 90.8399ms
+2022-02-02 21:53:07.078 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Images/gym.png - - - 200 44954 image/png 63.0182ms
+2022-02-02 21:53:07.096 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Bootstrap/css/bootstrap.min.css - - - 200 163873 text/css 116.0904ms
+2022-02-02 21:53:08.203 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 21:53:08.256 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 53.1272ms
+2022-02-02 21:53:11.235 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 21:53:11.248 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:53:11.255 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 21:53:11.856 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 21:53:11.899 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 639.8331ms
+2022-02-02 21:53:11.920 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 21:53:11.936 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237806 application/pdf 701.3951ms
+2022-02-02 22:18:13.005 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:18:14.063 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:18:14.098 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:18:14.111 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:18:14.272 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:18:16.769 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:18:17.624 -06:00 [INF] Executed DbCommand (102ms) [Parameters=[@__p_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`ConcurrencyStamp`, `a`.`Email`, `a`.`EmailConfirmed`, `a`.`LockoutEnabled`, `a`.`LockoutEnd`, `a`.`NormalizedEmail`, `a`.`NormalizedUserName`, `a`.`PasswordHash`, `a`.`PhoneNumber`, `a`.`PhoneNumberConfirmed`, `a`.`SecurityStamp`, `a`.`TwoFactorEnabled`, `a`.`UserName`
+FROM `AspNetUsers` AS `a`
+WHERE `a`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 22:18:17.893 -06:00 [INF] Executed DbCommand (20ms) [Parameters=[@__user_Id_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ClaimType`, `a`.`ClaimValue`, `a`.`UserId`
+FROM `AspNetUserClaims` AS `a`
+WHERE `a`.`UserId` = @__user_Id_0
+2022-02-02 22:18:17.911 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:18:18.015 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:18:18.162 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:18:18.436 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:18:18.783 -06:00 [INF] Executed ViewResult - view Index executed in 373.143ms.
+2022-02-02 22:18:18.791 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 765.8782ms
+2022-02-02 22:18:18.795 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:18:18.829 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 4593.9140ms
+2022-02-02 22:18:19.937 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:18:19.954 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 17.0433ms
+2022-02-02 22:18:55.824 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 22:18:55.884 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:18:55.890 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 22:19:01.941 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 22:19:01.963 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 6070.1883ms
+2022-02-02 22:19:01.971 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:19:01.990 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237814 application/pdf 6162.3115ms
+2022-02-02 22:29:51.772 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:29:52.609 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:29:52.611 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:29:52.617 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:29:52.672 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:29:53.364 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:29:53.431 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:29:54.730 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:29:55.437 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:29:55.674 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:29:56.017 -06:00 [INF] Executed ViewResult - view Index executed in 362.7285ms.
+2022-02-02 22:29:56.041 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 2599.0579ms
+2022-02-02 22:29:56.063 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:29:56.122 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 3449.0277ms
+2022-02-02 22:29:56.375 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:29:56.399 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 23.9866ms
+2022-02-02 22:30:01.430 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 22:30:01.462 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:30:01.468 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 22:30:07.709 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 22:30:07.778 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 6307.6081ms
+2022-02-02 22:30:07.783 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:30:07.793 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237962 application/pdf 6363.0442ms
+2022-02-02 22:32:50.610 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:32:51.547 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:32:51.550 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:32:51.553 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:32:51.630 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:32:52.284 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:32:52.345 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:32:53.385 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:32:54.011 -06:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:32:54.267 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:32:54.534 -06:00 [INF] Executed ViewResult - view Index executed in 299.3598ms.
+2022-02-02 22:32:54.543 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 2195.2312ms
+2022-02-02 22:32:54.550 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:32:54.645 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 2969.4338ms
+2022-02-02 22:32:55.092 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:32:55.114 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 22.1530ms
+2022-02-02 22:32:58.149 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 22:32:58.180 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:32:58.184 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 22:33:04.192 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 22:33:04.223 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 6035.4849ms
+2022-02-02 22:33:04.232 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:33:04.242 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237958 application/pdf 6092.8485ms
+2022-02-02 22:49:01.274 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:49:02.092 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:49:02.095 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:49:02.099 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:49:02.171 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:49:04.236 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:49:05.376 -06:00 [INF] Executed DbCommand (113ms) [Parameters=[@__p_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`AccessFailedCount`, `a`.`ConcurrencyStamp`, `a`.`Email`, `a`.`EmailConfirmed`, `a`.`LockoutEnabled`, `a`.`LockoutEnd`, `a`.`NormalizedEmail`, `a`.`NormalizedUserName`, `a`.`PasswordHash`, `a`.`PhoneNumber`, `a`.`PhoneNumberConfirmed`, `a`.`SecurityStamp`, `a`.`TwoFactorEnabled`, `a`.`UserName`
+FROM `AspNetUsers` AS `a`
+WHERE `a`.`Id` = @__p_0
+LIMIT 1
+2022-02-02 22:49:05.653 -06:00 [INF] Executed DbCommand (12ms) [Parameters=[@__user_Id_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`ClaimType`, `a`.`ClaimValue`, `a`.`UserId`
+FROM `AspNetUserClaims` AS `a`
+WHERE `a`.`UserId` = @__user_Id_0
+2022-02-02 22:49:05.667 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:49:05.705 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:49:05.835 -06:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:49:06.044 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:49:06.381 -06:00 [INF] Executed ViewResult - view Index executed in 366.1856ms.
+2022-02-02 22:49:06.388 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 678.6099ms
+2022-02-02 22:49:06.400 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:49:06.485 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 4316.9162ms
+2022-02-02 22:49:06.819 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:49:06.848 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 28.5888ms
+2022-02-02 22:49:14.189 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 22:49:14.227 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:49:14.233 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 22:50:23.650 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:50:24.337 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:50:24.340 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:50:24.343 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:50:24.406 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:50:24.971 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:50:25.022 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:50:26.148 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:50:26.746 -06:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:50:27.044 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:50:27.511 -06:00 [INF] Executed ViewResult - view Index executed in 488.3223ms.
+2022-02-02 22:50:27.518 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 2493.0991ms
+2022-02-02 22:50:27.524 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:50:27.555 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 3152.3478ms
+2022-02-02 22:50:28.046 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:50:28.199 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 152.7389ms
+2022-02-02 22:50:30.837 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 22:50:30.869 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:50:30.875 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 22:50:37.054 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 22:50:37.077 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 6200.1506ms
+2022-02-02 22:50:37.080 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:50:37.093 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237950 application/pdf 6256.0329ms
+2022-02-02 22:53:15.285 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:53:16.466 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:53:16.472 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:53:16.476 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:53:16.557 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:53:17.720 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:53:17.953 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:53:20.076 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:53:20.996 -06:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:53:21.307 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:53:21.690 -06:00 [INF] Executed ViewResult - view Index executed in 418.1088ms.
+2022-02-02 22:53:21.697 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 3713.5666ms
+2022-02-02 22:53:21.702 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:53:21.744 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 5189.3010ms
+2022-02-02 22:53:22.354 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:53:22.375 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 19.6016ms
+2022-02-02 22:54:17.341 -06:00 [INF] User profile is available. Using 'C:\Users\Susana\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-02 22:54:18.432 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-02 22:54:18.471 -06:00 [INF] Hosting environment: Development
+2022-02-02 22:54:18.522 -06:00 [INF] Content root path: C:\Users\Susana\source\repos\GymManager.Web\GymManager.Web
+2022-02-02 22:54:18.641 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/ - -
+2022-02-02 22:54:19.775 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:54:19.888 -06:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller GymManager.Web.Controllers.HomeController (GymManager.Web).
+2022-02-02 22:54:21.657 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'GymManagerContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.25-mysql 
+2022-02-02 22:54:22.607 -06:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `m`.`Id`, `m`.`AllowNewsletter`, `m`.`BirthDay`, `m`.`CityId`, `m`.`Email`, `m`.`LastName`, `m`.`MembershipTypeId`, `m`.`Name`, `m`.`RegisterDate`, `c`.`Id`, `c`.`Country`, `c`.`Name`, `m0`.`Id`, `m0`.`Cost`, `m0`.`CreatedOn`, `m0`.`Duration`, `m0`.`EquipmentTypeId`, `m0`.`Name`
+FROM `Members` AS `m`
+LEFT JOIN `Cities` AS `c` ON `m`.`CityId` = `c`.`Id`
+LEFT JOIN `MembershipType` AS `m0` ON `m`.`MembershipTypeId` = `m0`.`Id`
+2022-02-02 22:54:22.927 -06:00 [INF] Executing ViewResult, running view Index.
+2022-02-02 22:54:23.293 -06:00 [INF] Executed ViewResult - view Index executed in 396.4729ms.
+2022-02-02 22:54:23.303 -06:00 [INF] Executed action GymManager.Web.Controllers.HomeController.Index (GymManager.Web) in 3411.7442ms
+2022-02-02 22:54:23.324 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.HomeController.Index (GymManager.Web)'
+2022-02-02 22:54:23.372 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/ - - - 200 - text/html;+charset=utf-8 4736.6117ms
+2022-02-02 22:54:24.101 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/favicon.ico - -
+2022-02-02 22:54:24.125 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/favicon.ico - - - 404 - - 24.4151ms
+2022-02-02 22:54:28.984 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - -
+2022-02-02 22:54:29.024 -06:00 [INF] Executing endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:54:29.035 -06:00 [INF] Route matched with {action = "NewMembers", controller = "Reports", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewMembers() on controller GymManager.Web.Controllers.ReportsController (GymManager.Web).
+2022-02-02 22:54:36.880 -06:00 [INF] Executing FileContentResult, sending file with download name 'NewMembers.pdf' ...
+2022-02-02 22:54:36.929 -06:00 [INF] Executed action GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web) in 7891.5911ms
+2022-02-02 22:54:36.933 -06:00 [INF] Executed endpoint 'GymManager.Web.Controllers.ReportsController.NewMembers (GymManager.Web)'
+2022-02-02 22:54:36.938 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44387/Reports/NewMembers/ - - - 200 237950 application/pdf 7954.2952ms

@@ -1,0 +1,17 @@
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.ApplicationServices.deps.json
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.ApplicationServices.dll
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\ref\GymManager.ApplicationServices.dll
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.ApplicationServices.pdb
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.Core.dll
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.Core.pdb
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.csproj.AssemblyReference.cache
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.AssemblyInfoInputs.cache
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.AssemblyInfo.cs
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.csproj.CoreCompileInputs.cache
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.csproj.CopyComplete
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.dll
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\ref\GymManager.ApplicationServices.dll
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\obj\Debug\net5.0\GymManager.ApplicationServices.pdb
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.DataAccess.dll
+C:\Users\Susana\source\repos\GymManager.Web\GymManager.ApplicationServices\bin\Debug\net5.0\GymManager.DataAccess.pdb

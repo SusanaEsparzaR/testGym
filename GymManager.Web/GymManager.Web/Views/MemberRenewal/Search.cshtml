@@ -1,0 +1,11 @@
+﻿@model GymManager.Web.Models.MemberListViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="mt-5">Members renewal</h1>
+    <h2>Search Part</h2>
+    @await Html.PartialAsync("~/Views/Shared/_SearchMemberRenewal.cshtml", Model.Members)
+</div>
