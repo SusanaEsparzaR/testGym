@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "73eb5860-043a-49af-bf1b-9104c4d9a48e": {
+      "ProjectGuid": "73eb5860-043a-49af-bf1b-9104c4d9a48e",
+      "DisplayName": "SaleMicroservice",
+      "ColorIndex": 0
+    },
+    "72ff701f-f29c-4b4b-b1c7-e2aa9549d7d3": {
+      "ProjectGuid": "72ff701f-f29c-4b4b-b1c7-e2aa9549d7d3",
+      "DisplayName": "SaleMicroservice.DataAccess",
+      "ColorIndex": 1
+    },
+    "8b369c20-d2c8-4313-bd67-fff86eb8a747": {
+      "ProjectGuid": "8b369c20-d2c8-4313-bd67-fff86eb8a747",
+      "DisplayName": "SaleMicroservice.Core",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "163e95f3-7c82-4b86-82e4-02fc945012d2": {
+      "ProjectGuid": "163e95f3-7c82-4b86-82e4-02fc945012d2",
+      "DisplayName": "SaleMicroservice.ApplicationServices",
+      "ColorIndex": 3
+    },
+    "bc09fc35-c0e7-471b-bb08-bf9983185c10": {
+      "ProjectGuid": "bc09fc35-c0e7-471b-bb08-bf9983185c10",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 4
+    },
+    "b3f55d22-a38e-4abd-a209-3308479a762c": {
+      "ProjectGuid": "b3f55d22-a38e-4abd-a209-3308479a762c",
+      "DisplayName": "Sales.Microservice",
+      "ColorIndex": 5
+    },
+    "be6f92b3-9be3-4c47-97fb-8a255049ef37": {
+      "ProjectGuid": "be6f92b3-9be3-4c47-97fb-8a255049ef37",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 6
+    },
+    "74b0736f-6d21-436d-b416-6501e4a88906": {
+      "ProjectGuid": "74b0736f-6d21-436d-b416-6501e4a88906",
+      "DisplayName": "Sales.Microservice",
+      "ColorIndex": 7
+    }
+  },
+  "NextColorIndex": 8
+}

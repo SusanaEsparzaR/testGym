@@ -1,0 +1,17 @@
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.ApplicationServices.deps.json
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.ApplicationServices.dll
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\ref\SaleMicroservice.ApplicationServices.dll
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.ApplicationServices.pdb
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.Core.dll
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.DataAccess.dll
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.Core.pdb
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\bin\Relese\net5.0\SaleMicroservice.DataAccess.pdb
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.csproj.AssemblyReference.cache
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.AssemblyInfoInputs.cache
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.AssemblyInfo.cs
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.csproj.CoreCompileInputs.cache
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.csproj.CopyComplete
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.dll
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\ref\SaleMicroservice.ApplicationServices.dll
+C:\Users\Susana\source\repos\Api\SaleMicroservice\SaleMicroservice.ApplicationServices\obj\Relese\net5.0\SaleMicroservice.ApplicationServices.pdb
